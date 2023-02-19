@@ -1,0 +1,28 @@
+<div>
+  <h4>Kindly select the role to see the tag</h4>
+<select [(ngModel)]="role">
+  <option value="black">student</option>
+  <option value="violet">staff</option>
+  <option value="pink">Professor</option>
+  <option value="skyblue">Manager</option>
+  <option value="red">Select </option>
+
+</select>
+</div>
+
+<ul [ngStyle]="{'color': role}" [ngSwitch]="role">
+  <li *ngSwitchCase="'black'">For student-{{role}} color tag</li>
+  <li *ngSwitchCase="'violet'">For staff-{{role}} color tag</li>
+  <li *ngSwitchCase="'pink'">For Professor-{{role}} color tag</li>
+  <li *ngSwitchCase="'skyblue'">For Manager-{{role}} color tag</li>
+  <li *ngSwitchCase="'red'">Please Enter the type</li>
+  <li *ngSwitchDefault="">For student-{{role}} color tag</li>
+</ul>
+
+<h1 class="c1">GRT INSTITUDE OF ENGINEERING AND TECHNOLOGY</h1><br>
+
+<h1 [ngClass]="{c1:status}">COMPUTER SCIENCE ENGINEERING</h1>
+
+<button (click)="togglecase">change</button>
+
+<h1 appApphighlighter>suryakumar</h1>
